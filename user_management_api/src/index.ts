@@ -187,7 +187,7 @@ app.patch('/users/:id', async (req, res) => {
          if (typeof error === "object" && error !== null && "code" in error){
             if(error.code == "23505"){
             console.log(error)
-            return res.status(409).json("Conflict")
+            return res.status(409).json("Conflict - Duplicate email")
             }
         }
 
